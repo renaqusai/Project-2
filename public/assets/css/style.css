@@ -1,0 +1,14 @@
+.footers{
+
+    /* just for demo */
+    background-image: none;
+    text-align:center;
+    padding:20px;
+   /* just for demo */ 
+  
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 60px;
+    width: 100%;
+}
