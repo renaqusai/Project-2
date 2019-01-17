@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const axios = require('axios');
 
+
 var recipe = require("../models/recipemodel");
 
 router.get("/", function(req, res) {
@@ -23,6 +24,7 @@ const displayRecipes = () => {
             //     space + "Ingredients    :" + data.ingredients;
 
             // console.log(output);
+
             
             console.log(response.data.hits[0].recipe.label);
             console.log(response.data.hits[0].recipe.ingredientLines);
