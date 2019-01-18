@@ -1,8 +1,8 @@
 //Do not push it.
 
 module.exports = {
-    googleClientID: '371458567211-5kcnbgqa3mjh2uaml3gtqed293f1du6r.apps.googleusercontent.com',
-    googleClientSecret: 'MRNJ8zobJ1e_vKC--Mtu2m2P',
+    googleClientID: '198715747525-4t6lvd9cddmvb5a06rnvng9iqc4l08qj.apps.googleusercontent.com',
+    googleClientSecret: 'H_Nmz2PQ5j07gWaGLcQXQ1XB',
     mongoURI: 'mongodb://tej:password1@ds039017.mlab.com:39017/emaily-dev',
     kookieKey: 'dkfjeijfkjfjkdjfoeijfijofjsoijfjsffjfjjij'
 }
