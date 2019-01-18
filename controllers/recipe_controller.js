@@ -1,35 +1,11 @@
 const express = require('express');
 const router = express.Router();
-const axios = require('axios');
 
-const queryURL =` "https://api.edamam.com/search?q=random&app_id=e3c21f1d&app_key=3e40f04f482e04daac9d6917ba78643f&from=0&to=50`;
-const displayRecipes = () => {
-    axios
-        .get(queryURL)
-        .then((response) => {
-            console.log(response.data.hits[0].recipe);
-            const data = response.data.hits[0].recipe;
+var recipe = require("../models/recipemodel");
 
-            output = space + header + space + space
-            space + "Name           :" + data.label +
-                space + "source         :" + data.uri +
-                space + "Ingredients    :" + data.ingredients;
-
-            console.log(output);
-            
-            console.log(response.data.hits[0].recipe.label);
-            console.log(response.data.hits[0].recipe.ingredientLines);
-            console.log(response.data.hits[0].recipe.totalTime);
-            console.log(response.data.hits[0].recipe.uri);//instructions
-            console.log(response.data.hits[0].recipe.image);
-            console.log(response.data.hits[0].recipe.healthLabels);
-            console.log(response.data.hits[0].recipe.dietLabels);
-            console.log(response.data.hits[0].recipe.calories);
-
-        });
-};
-
-displayRecipes();
+router.get("/", function (req, res) {
+    res.render("index");
+});
 
 // Exporting router 
 module.exports = router;
