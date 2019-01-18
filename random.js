@@ -1,25 +1,37 @@
+const axios = require('axios');
+const ENV = require('dotenv');
+ENV.config();
+
+// Credentials <wb>
+const APP_ID = process.env.APP_ID;
+const APP_KEY = process.env.APP_KEY;
+
+
 function randomRecipe (){
-    var randomOne = "random";
-    var queryUrl = "https://api.edamam.com/search?q=" + randomOne + "&app_id=e3c21f1d&app_key=3e40f04f482e04daac9d6917ba78643f&from=0&to=100";
+    
+    const queryUrl = "https://api.edamam.com/search?q=random&app_id=" + process.env.APP_ID + "&app_key=" + process.env.APP_KEY +"&from=0&to=50&calories=591-722"
 
-    $.ajax({
-        url: queryUrl,
-        method: "GET"
-    }).then(function(response){
-        console.log(response.hits);
-        console.log(response.hits[0].recipe.label);
-        console.log(response.hits[0].recipe.ingredientLines);
-        console.log(response.hits[0].recipe.totalTime);
-        console.log(response.hits[0].recipe.uri);//instructions
-        console.log(response.hits[0].recipe.image);
-        console.log(response.hits[0].recipe.healthLabels);
-        console.log(response.hits[0].recipe.dietLabels);
-        console.log(response.hits[0].recipe.calories);
+    axios
+        .get(queryUrl)
+        .then((response) => {
 
-        var resp_hits = response.hits;
-        var i = resp_hits[Math.floor(Math.random() * resp_hits.length)];
+        // Template of API response <wb>
+        console.log(response.data.hits);
+        // console.log(response.data.hits[0].recipe.label);
+        // console.log(response.data.hits[0].recipe.ingredientLines);
+        // console.log(response.data.hits[0].recipe.totalTime);
+        // console.log(response.data.hits[0].recipe.uri);//instructions
+        // console.log(response.data.hits[0].recipe.image);
+        // console.log(response.data.hits[0].recipe.healthLabels);
+        // console.log(response.data.hits[0].recipe.dietLabels);
+        // console.log(response.data.hits[0].recipe.calories);
         
+        // Randomize our search result and display one randomized recipe
+        const respHits = response.data.hits;
+        const i = respHits[Math.floor(Math.random() * respHits.length)];
         
+        console.log(i.recipe.label);
+
         $("").html("label: " + i.recipe.label);
         $("").html("Ingredients: " + i.recipe.ingredientLines);
         $("").html("Total Time: " + i.recipe.totalTime);
@@ -28,9 +40,8 @@ function randomRecipe (){
         $("").html("label: " + i.recipe.healthLabels);
         $("").html("label: " + i.recipe.dietLabels);
         $("").html("label: " + i.recipe.calories);
-        
-        
-    })
+        ;
+    });
+};
 
-}
 randomRecipe();
