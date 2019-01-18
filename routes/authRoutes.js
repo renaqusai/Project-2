@@ -6,7 +6,14 @@ module.exports = (app) => {
     })
     );
 
-    app.get('/auth/google/callback', passport.authenticate('google'));
+    app.get('/auth/google/callback', passport.authenticate('google', {
+        defaultLayout: ["main"]
+
+        // var exphbs = require("express-handlebars");
+
+        // app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+        // app.set("view engine", "handlebars");
+    }));
 
     app.get('/api/logout', (req, res) => {
         req.logout();
