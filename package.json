@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tejpoudel/RecipeKeeper.git"
+    "url": "git+https://github.com/renaqusai/Project-2.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/tejpoudel/RecipeKeeper/issues"
+    "url": "https://github.com/renaqusai/Project-2/issues"
   },
-  "homepage": "https://github.com/tejpoudel/RecipeKeeper#readme",
+  "homepage": "https://github.com/renaqusai/Project-2#readme",
   "dependencies": {
     "cookie-session": "^2.0.0-beta.3",
     "express": "^4.16.4",
