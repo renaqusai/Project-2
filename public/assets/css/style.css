@@ -1,3 +1,16 @@
+@import "/home.css";
+
+#user-recipe {
+    border: 5px black;
+    border-radius: 8px;
+    color: #280f4b;
+    font-size: 28px;
+    background: rgba(215, 216, 218, 0.815);
+    height: 500px;
+    margin-left:30px;
+    margin-right: 30px;
+   
+}
 /*==============================================
           Feast Website Stylesheet
            Body Core Stylesheet
