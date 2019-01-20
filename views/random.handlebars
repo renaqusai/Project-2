@@ -2,12 +2,10 @@
     <header class="top">
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a class="active" href="index.html">Home</a>
+            <a class="active" href="/home">Home</a>
             <a href="about.html">About Us</a>
             <a href="/recipes">Recipes from You</a>
             <a href="">Github</a>
-            
-            
         </div>
 
         <nav id="navbar">
@@ -43,13 +41,9 @@
                 <div class="name">
                         <img src="/assets/img/recipe.png" alt="" height="auto" width="800">
                 </div>
-                <div class = "button-area">
-                    <div class="login-button">
-                       <a href="/auth/google"><button class="sign-up">SIGN UP / LOG IN</button></a>
-                    </div>
-                    <div class="guest-button">
-                        <a href="/home"><button class="guest">CONTINUE AS GUEST</button></a>
-                    </div>
+
+                <div id="random">
+                Here we will show randomize button with the recipe found from api
                 </div>
             </div>
             <!--Row Ended-->
@@ -61,10 +55,10 @@
     <!-- Footer Links -->
 
     <!-- Footer -->
-    {{!-- <footer class="footers">
-      <a href="/random"><button class="try"><i class="fas fa-bookmark"></i></button></a>
+  <footer class="footers">
+      <a href="/random"><button class="try"><i class="fas fa-question-circle"></i></button></a>
       <a href="/search"><button class="try"><i class="fas fa-utensils"></i></button></a>
       <a href="/addrecipe"><button class="try"><i class="fas fa-pencil-alt"></i></button></a>
-      <a href="shoppinglist"><button class="try"><i class="fas fa-list-ol"></i></button></a>
-    </footer> --}}
+      <a href="/shoppinglist"><button class="try"><i class="fas fa-list-ol"></i></button></a>
+    </footer>
 

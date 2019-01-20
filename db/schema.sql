@@ -1,5 +1,5 @@
-CREATE DATABASE recipes_db;
-USE recipes_db;
+CREATE DATABASE recipe_db;
+USE recipe_db;
 
 CREATE TABLE recipes (
     id INT AUTO_INCREMENT,
@@ -27,12 +27,12 @@ CREATE TABLE ingredient_lines (
     ing_6 VARCHAR(200) NOT NULL,
     ing_7 VARCHAR(200) NOT NULL,
     ing_8 VARCHAR(200) NOT NULL,
-    PRIMARY KEY (id)
+    PRIMARY KEY (recipe_id)
 );
 
 CREATE TABLE comments_ratings (
     recipe_id INT AUTO_INCREMENT,
     comments VARCHAR(300),
     ratings INT,
-    PRIMARY KEY (id)
+    PRIMARY KEY (recipe_id)
 );
