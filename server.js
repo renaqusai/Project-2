@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const passport = require('passport');
 const cookieSession = require('cookie-session');
 const keys = require('./config/keys');
+
 require('./models/User');
 require('./services/passport.js');
 

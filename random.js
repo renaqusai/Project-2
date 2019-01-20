@@ -1,3 +1,4 @@
+
 function randomRecipe (){
     var randomOne = "random";
     var queryUrl = "https://api.edamam.com/search?q=" + randomOne + "&app_id=e3c21f1d&app_key=3e40f04f482e04daac9d6917ba78643f&from=0&to=100";
@@ -20,6 +21,7 @@ function randomRecipe (){
         var i = resp_hits[Math.floor(Math.random() * resp_hits.length)];
         
         
+
         $("").html("label: " + i.recipe.label);
         $("").html("Ingredients: " + i.recipe.ingredientLines);
         $("").html("Total Time: " + i.recipe.totalTime);
@@ -28,9 +30,12 @@ function randomRecipe (){
         $("").html("label: " + i.recipe.healthLabels);
         $("").html("label: " + i.recipe.dietLabels);
         $("").html("label: " + i.recipe.calories);
+
         
         
     })
 
 }
+
+
 randomRecipe();
