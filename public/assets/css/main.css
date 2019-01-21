@@ -25,6 +25,9 @@ body {
     overflow-x: hidden;
     background-color: #fff;
     font-family: 'Montserrat', sans-serif;
+    background-image: url("../img/background.jpg");
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 body,
@@ -137,7 +140,7 @@ header {
 }
 
 .header {
-    background-image: url("../img/background.jpg");
+    /* background-image: url("../img/background.jpg"); */
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
@@ -338,7 +341,7 @@ header .social-icons i:hover {
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
-    background-image: url(../img/background.jpg);
+
 }
 
 .banner-home h1,

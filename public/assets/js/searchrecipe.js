@@ -46,4 +46,5 @@ const queryURL = "https://api.edamam.com/search?q=&app_id=e3c21f1d&app_key=3e40f
     }
 
 searchRecipes();
+
      
