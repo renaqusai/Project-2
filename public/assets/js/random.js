@@ -9,14 +9,14 @@ const APP_KEY = process.env.APP_KEY;
 
 function randomRecipe (){
     
-    const queryUrl = "https://api.edamam.com/search?q=random&app_id=" + process.env.APP_ID + "&app_key=" + process.env.APP_KEY +"&from=0&to=50&calories=591-722"
+    const queryUrl = "https://api.edamam.com/search?q=&app_id=e3c21f1d&app_key=3e40f04f482e04daac9d6917ba78643f&from=0&to=3&calories=591-722";
 
     axios
         .get(queryUrl)
         .then((response) => {
 
         // Template of API response <wb>
-        console.log(response.data.hits);
+        console.log(response.hits);
         // console.log(response.data.hits[0].recipe.label);
         // console.log(response.data.hits[0].recipe.ingredientLines);
         // console.log(response.data.hits[0].recipe.totalTime);
@@ -32,16 +32,18 @@ function randomRecipe (){
         
         console.log(i.recipe.label);
 
-        $("").html("label: " + i.recipe.label);
-        $("").html("Ingredients: " + i.recipe.ingredientLines);
-        $("").html("Total Time: " + i.recipe.totalTime);
-        $("").html("Instructions: " + i.recipe.uri);
-        $("").html("Photo: " + i.recipe.image);
-        $("").html("label: " + i.recipe.healthLabels);
-        $("").html("label: " + i.recipe.dietLabels);
-        $("").html("label: " + i.recipe.calories);
-        ;
+        $(".label").html("label: " + i.recipe.label);
+        $(".ingredient").html("Ingredients: " + i.recipe.ingredientLines);
+        // $("").html("Total Time: " + i.recipe.totalTime);
+        $(".instruction").html("Instructions: " + i.recipe.uri);
+        $(".photo").html("Photo: " + i.recipe.image);
+        // $("").html("label: " + i.recipe.healthLabels);
+        // $("").html("label: " + i.recipe.dietLabels);
+        // $("").html("label: " + i.recipe.calories);
+
     });
 };
 
-randomRecipe();
+module.exports = {
+    randomRecipe,
+};
