@@ -33,7 +33,7 @@ const searchRecipes = () => {
 
             var ingredients = response.hits[i].recipe.ingredientLines;
             var ul = $('<ul>');
-            for (var i = 0; i < ingredients.length; i++) {
+            for (var j = 0; j < ingredients.length; j++) {
                 var li = $('<li>');
                 li.append(ingredients[i]);
                 ul.append(li);
