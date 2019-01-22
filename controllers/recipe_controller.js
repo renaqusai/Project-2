@@ -1,11 +1,8 @@
+const express = require('express');
 const router = express.Router();
 const axios = require('axios');
 
-<<<<<<< frontend011819
-// <<<<<<< HEAD
-// =======
-
-// >>>>>>> aa7b647e22c866ed5fde61cc0dc4e34e895d9017
+// aa7b647e22c866ed5fde61cc0dc4e34e895d9017
 var recipe = require("../models/recipemodel");
 
 router.get("/", function (req, res) {
@@ -41,10 +38,9 @@ router.get("/index-guest/recipeAPI-guest", function (req, res) {
 });
 
 router.get("/index-guest/recipeDB-guest", function (req, res) {
-=======
 
  // <<<<<<< HEAD
-// =======
+
 
  // >>>>>>> aa7b647e22c866ed5fde61cc0dc4e34e895d9017
 var recipe = require("../models/recipemodel");
@@ -82,22 +78,14 @@ res.render("index");
     res.render("recipeAPIguest");
 });
 
- router.get("/index-guest/recipeDB-guest", function (req, res) {
->>>>>>> master
-    res.render("recipeDBguest");
-});
 
-
-<<<<<<< frontend011819
-
-=======
->>>>>>> master
 const api_key = process.env.API_KEY;
+
 
 
 const queryURL = "https://api.edamam.com/search?q=&app_id=e3c21f1d&app_key=3e40f04f482e04daac9d6917ba78643f&from=0&to=3&calories=591-722";
 const displayRecipes = () => {
-<<<<<<< frontend011819
+
     axios.get(queryURL).then((response) => {
         // console.log(response.data.hits[0].recipe);
         const data = response.data.hits[0].recipe;
@@ -126,17 +114,7 @@ const displayRecipes = () => {
 
     });
 };
-=======
-axios.get(queryURL).then((response) => {
-	        // console.log(response.data.hits[0].recipe);
-const data = response.data.hits[0].recipe;
 
-
-            // output = space + header + space + space
-            // space + "Name           :" + data.label +
-            //     space + "source         :" + data.uri +
-            //     space + "Ingredients    :" + data.ingredients;
->>>>>>> master
 
          // <<<<<<< HEAD
             // console.log(output);	
@@ -156,8 +134,7 @@ const data = response.data.hits[0].recipe;
 
      });
 };
-displayRecipes();
-=======
+
 // Landing page
 router.get("/", (req, res) => {
     res.render("index");
@@ -172,6 +149,7 @@ router.get("/home", (req, res) => {
 router.get("/random", (req, res) => {
     res.render("random");
 });
+
 
 // Displaying recipes by queries
 router.get("/search", (req, res) => {
