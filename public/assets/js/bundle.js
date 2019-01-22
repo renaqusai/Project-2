@@ -1635,8 +1635,10 @@ $(function(){$(".scroll").click(function(){$("html,body").animate({scrollTop:$("
     });
 
 },{}],30:[function(require,module,exports){
+const srcRcp = require('../js/searchrecipe');
 
-},{}],31:[function(require,module,exports){
+srcRcp.searchRecipes( console.log(response.hits[i].recipe.ingredientLines));
+},{"../js/searchrecipe":32}],31:[function(require,module,exports){
 (function (process){
 const axios = require('axios');
 const ENV = require('dotenv');
@@ -1689,14 +1691,13 @@ module.exports = {
 };
 }).call(this,require('_process'))
 },{"_process":35,"axios":1,"dotenv":26}],32:[function(require,module,exports){
-
 const searchRecipes = () => {
-const queryURL = "https://api.edamam.com/search?q=&app_id=e3c21f1d&app_key=3e40f04f482e04daac9d6917ba78643f&from=0&to=3&calories=591-722";
- $.ajax({
-    url: queryURL,
-    method: "GET"
-}).then((response) => {
-        
+    const queryURL = "https://api.edamam.com/search?q=&app_id=e3c21f1d&app_key=3e40f04f482e04daac9d6917ba78643f&from=0&to=3&calories=591-722";
+    $.ajax({
+        url: queryURL,
+        method: "GET"
+    }).then((response) => {
+
         console.log(response.hits);
         var resp_hits = response.hits;
         // console.log(response.data.hits[0].recipe.ingredientLines);
@@ -1707,12 +1708,12 @@ const queryURL = "https://api.edamam.com/search?q=&app_id=e3c21f1d&app_key=3e40f
         // console.log(response.data.hits[0].recipe.dietLabels);
         // console.log(response.data.hits[0].recipe.calories);
 
-        for (var i = 0; i < resp_hits.length; i ++) {
+        for (var i = 0; i < resp_hits.length; i++) {
             console.log(response.hits[i].recipe.label);
 
             var img = $("<img>");
             img.addClass("images");
-            img.attr("width","250")
+            img.attr("width", "250")
             img.attr("src", response.hits[i].recipe.image)
             console.log(img)
             $("#search").append(img);
@@ -1722,10 +1723,15 @@ const queryURL = "https://api.edamam.com/search?q=&app_id=e3c21f1d&app_key=3e40f
             label.append(response.hits[i].recipe.label);
             $("#search").append(label);
 
-            var ingredients = $("<p>");
-            ingredients.addClass("ingredients");
-            ingredients.append(response.hits[i].recipe.ingredientLines);
-            $("#search").append(ingredients);
+
+            var ingredients = response.hits[i].recipe.ingredientLines;
+            var ul = $('<ul>');
+            for (var i = 0; i < ingredients.length; i++) {
+                var li = $('<li>');
+                li.append(ingredients[i]);
+                ul.append(li);
+            }
+            $('#search').append(ul);
 
             var instruction = $("<p>");
             instruction.addClass("instruction");
@@ -1733,15 +1739,17 @@ const queryURL = "https://api.edamam.com/search?q=&app_id=e3c21f1d&app_key=3e40f
             $("#search").append(instruction);
 
         }
-     });
-    }
+    });
+}
 
 searchRecipes();
 
-     
+module.exports = {
+    searchRecipes,
+}
 },{}],33:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],34:[function(require,module,exports){
+
+},{}],34:[function(require,module,exports){
 (function (process){
 // .dirname, .basename, and .extname methods are extracted from Node.js v8.11.1,
 // backported and transplited with Babel, with backwards-compat fixes
