@@ -2,14 +2,10 @@
     <header class="top">
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a class="active" href="index.html">Home</a>
-\
-            <a href="about.html">About</a>
-            <a href="recipes.html">Recipes from Us</a>
-            <a href="recipes.html">Recipes from You</a>
-            <a href="form.html">Submit Your Own Recipe</a>
-            <a href="list.html">Shopping List</a>
-\
+            <a class="active" href="/home">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="/recipes">Recipes from You</a>
+            <a href="">Github</a>
         </div>
 
         <nav id="navbar">
@@ -42,19 +38,13 @@
         <div class="container">
             <!--Row Start-->
             <div>
-                <div class="name">
-                        <img src="/assets/img/recipe.png" alt="" height="auto" width="800">
-                </div>
-                <div class = "button-area">
-                    <div class="login-button">
-                       <a href="/auth/google"><button class="sign-up">SIGN UP / LOG IN</button></a>
-                    </div>
-                    <div class="guest-button">
+                <div id="user-recipe">
+                    WELCOME TO HOMEPAGE
+                    <p>Here are recipes submitted by your peers</p>
+                    <div id="disp-recipe"></div>                    
 
-                        <a href="/index-guest/recipeAPI-guest"><button class="guest">CONTINUE AS GUEST</button></a>
-
-                    </div>
                 </div>
+                
             </div>
             <!--Row Ended-->
         </div>
@@ -65,12 +55,10 @@
     <!-- Footer Links -->
 
     <!-- Footer -->
-    {{!-- <footer class="footers">
-
-      <button class="try"><i class="fas fa-bookmark"></i></button>
-      <button class="try"><i class="fas fa-utensils"></i></button>
-      <button class="try"><i class="fas fa-pencil-alt"></i></button>
-      <button class="try"><i class="fas fa-list-ol"></i></button>
-
-    </footer> --}}
+    <footer class="footers">
+      <a href="/random"><button class="try"><i class="fas fa-question-circle"></i></button></a>
+      <a href="/search"><button class="try"><i class="fas fa-utensils"></i></button></a>
+      <a href="/addrecipe"><button class="try"><i class="fas fa-pencil-alt"></i></button></a>
+      <a href="/shoppinglist"><button class="try"><i class="fas fa-list-ol"></i></button></a>
+    </footer>
 

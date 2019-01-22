@@ -1,7 +1,4 @@
-<body>
-
-    <!-- Header section Start-->
-    <header class="top">
+ <header class="top">
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <a class="active" href="index.html">Home</a>
@@ -42,19 +39,22 @@
         <div class="container">
             <!--Row Start-->
             <div>
-                <div class="name">
-                        <img src="../feast-master 2/images/recipe.png" alt="" height="auto" width="800">
+<div class="name">
+                        <a href="/"><img class="image-side" src="/assets/img/recipe.png" alt="" height="auto" width="300"></a> 
                 </div>
-                <div class = "button-area">
-                    <div class="login-button">
-                        <button class="sign-up">SIGN UP / LOG IN</button>
-                    </div>
-                    <div class="guest-button">
-                        <button class="guest">CONTINUE AS GUEST</button>
-                    </div>
+
+                <div class="heading">
+                    <h1 class="heading-index-guest">WHAT TO DO TODAY?</h1>
+                </div>
+                <div class="button-box">
+        <a href="/index-login/recipeAPI"><button class="button-after-login"><i class="fas fa-bookmark"></i></button></a>
+        <a href="/index-login/recipeDB"><button class="button-after-login"><i class="fas fa-utensils"></i></button></a>
+        <a href="/index-login/recipe-input"><button class="button-after-login"><i class="fas fa-pencil-alt"></i></button></a>
+        <a href="/index-login/shopping-list"><button class="button-after-login"><i class="fas fa-list-ol"></i></button></a>
                 </div>
             </div>
-            <!--Row Ended-->
+        </div>
+        <!--Row Ended-->
         </div>
         <!-- container Ended-->
     </section>
@@ -63,28 +63,9 @@
     <!-- Footer Links -->
 
     <!-- Footer -->
-    <footer class="footers">
+    <!-- <footer class="footers">
       <button class="try"><i class="fas fa-bookmark"></i></button>
       <button class="try"><i class="fas fa-utensils"></i></button>
       <button class="try"><i class="fas fa-pencil-alt"></i></button>
       <button class="try"><i class="fas fa-list-ol"></i></button>
-    </footer>
-
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js"></script>
-    <!-- Custom JavaScript -->
-    <script src="js/animate.js"></script>
-    <script src="js/custom.js"></script>
-    <script>
-        $(document).on('click', '[data-toggle="lightbox"]', function (event) {
-            event.preventDefault();
-            $(this).ekkoLightbox();
-        });
-    </script>
-</body>
+    </footer> -->
