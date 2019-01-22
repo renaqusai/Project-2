@@ -1,9 +1,13 @@
+const express = require('express');
 const router = express.Router();
 const axios = require('axios');
 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
  // <<<<<<< HEAD
-// =======
+
 
  // >>>>>>> aa7b647e22c866ed5fde61cc0dc4e34e895d9017
 var recipe = require("../models/recipemodel");
@@ -48,6 +52,7 @@ res.render("index");
 const api_key = process.env.API_KEY;
 
 
+<<<<<<< Updated upstream
 const queryURL = "https://api.edamam.com/search?q=&app_id=e3c21f1d&app_key=3e40f04f482e04daac9d6917ba78643f&from=0&to=3&calories=591-722";
 const displayRecipes = () => {
 axios.get(queryURL).then((response) => {
@@ -78,6 +83,22 @@ const data = response.data.hits[0].recipe;
 
      });
 };
+=======
+// Landing page
+router.get("/", (req, res) => {
+    res.render("index");
+});
+
+// Home Page featuring recipes from users
+router.get("/home", (req, res) => {
+    res.render("home");
+});
+
+// What to cook feature lets user click a random button to get a randomized recipe suggestion
+router.get("/random", (req, res) => {
+    res.render("random");
+});
+>>>>>>> Stashed changes
 
 
  displayRecipes();	displayRecipes();
