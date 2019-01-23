@@ -1,7 +1,12 @@
+const rnd = require('./random');
+
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
 $(function() {
-    $(".sign-up").on("click", function(event) {
-        
+    $(".random-button").on("click", function(event) {
+      event.preventDefault();
+      console.log("i did it!");
+      rnd.randomRecipe();
+      $('.random-button').hide();
       });
 
     // Send the PUT request.
