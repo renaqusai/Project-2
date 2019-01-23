@@ -41,9 +41,7 @@ function objToSql(ob) {
 
 // Object for all our SQL statement functions.
 var orm = {
-
-  all: function(tableInput, cb) {
-
+  all: (tableInput, cb) => {
     var queryString = "SELECT * FROM " + tableInput + ";";
     connection.query(queryString, function(err, result) {
       if (err) {
@@ -106,6 +104,4 @@ var orm = {
 };
 
 // Export the orm object for the model (cat.js).
-
 module.exports = orm;
-
