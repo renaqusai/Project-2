@@ -1,5 +1,6 @@
 @import "/home.css";
 
+
 #user-recipe {
     border: 5px black;
     border-radius: 8px;
@@ -10,6 +11,20 @@
     margin-left:30px;
     margin-right: 30px;
    
+}
+
+#add-recipe {
+    background: lightblue;
+    border: 10px gray;
+    border-radius: 8px;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+}
+#subtext {   
+    padding: 20px;
+    margin: 20px;
+    font-family: 'Montserrat', sans-serif;
+
 }
 /*==============================================
           Feast Website Stylesheet
