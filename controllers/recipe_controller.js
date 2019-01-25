@@ -53,7 +53,7 @@ const api_key = process.env.API_KEY;
 const queryURL = "https://api.edamam.com/search?q=&app_id=e3c21f1d&app_key=3e40f04f482e04daac9d6917ba78643f&from=0&to=3&calories=591-722";
 const displayRecipes = () => {
 axios.get(queryURL).then((response) => {
-	        // console.log(response.data.hits[0].recipe);
+            // console.log(response.data.hits[0].recipe);
 const data = response.data.hits[0].recipe;
 
 
@@ -63,7 +63,7 @@ const data = response.data.hits[0].recipe;
             //     space + "Ingredients    :" + data.ingredients;
 
          // <<<<<<< HEAD
-            // console.log(output);	
+            // console.log(output);    
 
          //             // console.log(output);
  
@@ -118,14 +118,24 @@ router.get("/recipes", (req, res) => {
 });
 
 // Display recipes from db to home
-// router.get('/home', (req, res) => {
-//     recipe.all((data) => {
-//         let hbsObject = {
-//             recipe: data
-//         };
-//         res.render('home', hbsObject)
-//     });
-// });
+router.get('/home', (req, res) => {
+    recipe.all((data) => {
+        let hbsObject = {
+            recipe: data
+        };
+        res.render("disp-recipe", hbsObject)
+    });
+});
+
+router.post('/', (req, res) => {
+    recipe.create(['label', 'ingredientLines', 'totalTime', 'instructions_uri', 'image', 'dietLabels', 'allergies', 'calories'
+    ], [
+        req.body.label, req.body.ing1, req.body.totalTime, req.body.instruction, req.body.imageLink, req.body.dietLabels, req.body.allergies, req.body.calories
+    ],
+    (data) => {
+        res.redirect('/');
+    })
+});
 
 // Exporting router 
 module.exports = router;
