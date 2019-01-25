@@ -2,54 +2,11 @@ const express = require('express');
 const router = express.Router();
 const axios = require('axios');
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-// aa7b647e22c866ed5fde61cc0dc4e34e895d9017
-var recipe = require("../models/recipemodel");
-
-router.get("/", function (req, res) {
-    res.render("index");
-});
-
-router.get("/index-guest", function (req, res) {
-    res.render("indexguest");
-});
-
-router.get("/index-login/", function (req, res) {
-    res.render("indexlogin");
-});
-
-router.get("/index-login/recipeAPI", function (req, res) {
-    res.render("recipeAPI");
-});
-
-router.get("/index-login/recipeDB", function (req, res) {
-    res.render("recipeDB");
-});
-
-router.get("/index-login/recipe-input", function (req, res) {
-    res.render("recipeinput");
-});
-
-router.get("/index-login/shopping-list", function (req, res) {
-    res.render("list");
-});
-
-router.get("/index-guest/recipeAPI-guest", function (req, res) {
-    res.render("recipeAPIguest");
-});
-
-router.get("/index-guest/recipeDB-guest", function (req, res) {
-=======
->>>>>>> ea0dfbc963d38f3f95a3f469826195a8e07205c6
 
  // <<<<<<< HEAD
 // =======
 
  // >>>>>>> aa7b647e22c866ed5fde61cc0dc4e34e895d9017
->>>>>>> aab71371e69b9e3bdbfdd9e2f1304abb3d2e52bd
 var recipe = require("../models/recipemodel");
 
 
@@ -85,29 +42,18 @@ res.render("index");
     res.render("recipeAPIguest");
 });
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ea0dfbc963d38f3f95a3f469826195a8e07205c6
  router.get("/index-guest/recipeDB-guest", function (req, res) {
     res.render("recipeDBguest");
 });
 
-<<<<<<< HEAD
-=======
->>>>>>> aab71371e69b9e3bdbfdd9e2f1304abb3d2e52bd
-=======
->>>>>>> ea0dfbc963d38f3f95a3f469826195a8e07205c6
 
 const api_key = process.env.API_KEY;
 
 
 const queryURL = "https://api.edamam.com/search?q=&app_id=e3c21f1d&app_key=3e40f04f482e04daac9d6917ba78643f&from=0&to=3&calories=591-722";
 const displayRecipes = () => {
-<<<<<<< HEAD
-<<<<<<< HEAD
 axios.get(queryURL).then((response) => {
-	        // console.log(response.data.hits[0].recipe);
+            // console.log(response.data.hits[0].recipe);
 const data = response.data.hits[0].recipe;
 
 
@@ -115,25 +61,9 @@ const data = response.data.hits[0].recipe;
             // space + "Name           :" + data.label +
             //     space + "source         :" + data.uri +
             //     space + "Ingredients    :" + data.ingredients;
-=======
-=======
-axios.get(queryURL).then((response) => {
-	        // console.log(response.data.hits[0].recipe);
-const data = response.data.hits[0].recipe;
->>>>>>> ea0dfbc963d38f3f95a3f469826195a8e07205c6
-
-
-<<<<<<< HEAD
->>>>>>> aab71371e69b9e3bdbfdd9e2f1304abb3d2e52bd
-=======
-            // output = space + header + space + space
-            // space + "Name           :" + data.label +
-            //     space + "source         :" + data.uri +
-            //     space + "Ingredients    :" + data.ingredients;
->>>>>>> ea0dfbc963d38f3f95a3f469826195a8e07205c6
 
          // <<<<<<< HEAD
-            // console.log(output);	
+            // console.log(output);    
 
          //             // console.log(output);
  
@@ -150,75 +80,62 @@ const data = response.data.hits[0].recipe;
 
      });
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
 displayRecipes();
-=======
-=======
-displayRecipes();
->>>>>>> ea0dfbc963d38f3f95a3f469826195a8e07205c6
 
 // Landing page
 router.get("/", (req, res) => {
     res.render("index");
 });
->>>>>>> aab71371e69b9e3bdbfdd9e2f1304abb3d2e52bd
 
-// // Landing page
-// router.get("/", (req, res) => {
-//     res.render("index");
-// });
+// Home Page featuring recipes from users
+router.get("/home", (req, res) => {
+    res.render("home");
+});
 
-// // Home Page featuring recipes from users
-// router.get("/home", (req, res) => {
-//     res.render("home");
-// });
+// What to cook feature lets user click a random button to get a randomized recipe suggestion
+router.get("/random", (req, res) => {
+    res.render("random");
+});
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-// // What to cook feature lets user click a random button to get a randomized recipe suggestion
-// router.get("/random", (req, res) => {
-//     res.render("random");
-// });
-=======
-
-=======
->>>>>>> ea0dfbc963d38f3f95a3f469826195a8e07205c6
 // Displaying recipes by queries
 router.get("/search", (req, res) => {
     res.render("search");
 });
->>>>>>> aab71371e69b9e3bdbfdd9e2f1304abb3d2e52bd
 
-// // Displaying recipes by queries
-// router.get("/search", (req, res) => {
-//     res.render("search");
-// });
+// Page where user can write their recipe and submit an image
+router.get("/addrecipe", (req, res) => {
+    res.render("add_recipe");
+});
 
-// // Page where user can write their recipe and submit an image
-// router.get("/addrecipe", (req, res) => {
-//     res.render("add_recipe");
-// });
+// Ingredients can be added to the list from recipes
+router.get("/shoppinglist", (req, res) => {
+    res.render("shopping_list");
+});
 
-// // Ingredients can be added to the list from recipes
-// router.get("/shoppinglist", (req, res) => {
-//     res.render("shopping_list");
-// });
-
-// // Api submission from users
-// router.get("/recipes", (req, res) => {
-//     res.render("");
-// });
+// Api submission from users
+router.get("/recipes", (req, res) => {
+    res.render("");
+});
 
 // Display recipes from db to home
-// router.get('/home', (req, res) => {
-//     recipe.all((data) => {
-//         let hbsObject = {
-//             recipe: data
-//         };
-//         res.render('home', hbsObject)
-//     });
-// });
+router.get('/home', (req, res) => {
+    recipe.all((data) => {
+        let hbsObject = {
+            recipe: data
+        };
+        res.render("disp-recipe", hbsObject)
+    });
+});
+
+router.post('/', (req, res) => {
+    recipe.create(['label', 'ingredientLines', 'totalTime', 'instructions_uri', 'image', 'dietLabels', 'allergies', 'calories'
+    ], [
+        req.body.label, req.body.ing1, req.body.totalTime, req.body.instruction, req.body.imageLink, req.body.dietLabels, req.body.allergies, req.body.calories
+    ],
+    (data) => {
+        res.redirect('/');
+    })
+});
 
 // Exporting router 
 module.exports = router;
