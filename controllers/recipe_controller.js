@@ -3,6 +3,7 @@ const router = express.Router();
 const axios = require('axios');
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 // aa7b647e22c866ed5fde61cc0dc4e34e895d9017
@@ -41,16 +42,18 @@ router.get("/index-guest/recipeAPI-guest", function (req, res) {
 });
 
 router.get("/index-guest/recipeDB-guest", function (req, res) {
+=======
+>>>>>>> ea0dfbc963d38f3f95a3f469826195a8e07205c6
 
  // <<<<<<< HEAD
-
+// =======
 
  // >>>>>>> aa7b647e22c866ed5fde61cc0dc4e34e895d9017
 >>>>>>> aab71371e69b9e3bdbfdd9e2f1304abb3d2e52bd
 var recipe = require("../models/recipemodel");
 
 
- router.get("/", function (req, res) {
+router.get("/", function (req, res) {
 res.render("index");
 });
 
@@ -83,19 +86,25 @@ res.render("index");
 });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ea0dfbc963d38f3f95a3f469826195a8e07205c6
  router.get("/index-guest/recipeDB-guest", function (req, res) {
     res.render("recipeDBguest");
 });
 
+<<<<<<< HEAD
 =======
 >>>>>>> aab71371e69b9e3bdbfdd9e2f1304abb3d2e52bd
+=======
+>>>>>>> ea0dfbc963d38f3f95a3f469826195a8e07205c6
 
 const api_key = process.env.API_KEY;
 
 
-
 const queryURL = "https://api.edamam.com/search?q=&app_id=e3c21f1d&app_key=3e40f04f482e04daac9d6917ba78643f&from=0&to=3&calories=591-722";
 const displayRecipes = () => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 axios.get(queryURL).then((response) => {
 	        // console.log(response.data.hits[0].recipe);
@@ -107,37 +116,21 @@ const data = response.data.hits[0].recipe;
             //     space + "source         :" + data.uri +
             //     space + "Ingredients    :" + data.ingredients;
 =======
+=======
+axios.get(queryURL).then((response) => {
+	        // console.log(response.data.hits[0].recipe);
+const data = response.data.hits[0].recipe;
+>>>>>>> ea0dfbc963d38f3f95a3f469826195a8e07205c6
 
-    axios.get(queryURL).then((response) => {
-        // console.log(response.data.hits[0].recipe);
-        const data = response.data.hits[0].recipe;
 
-        // output = space + header + space + space
-        // space + "Name           :" + data.label +
-        //     space + "source         :" + data.uri +
-        //     space + "Ingredients    :" + data.ingredients;
-        // <<<<<<< HEAD
-
-        //             // console.log(output);
-        // =======
-
-        //             // console.log(output);
-
-        // >>>>>>> aa7b647e22c866ed5fde61cc0dc4e34e895d9017
-
-        console.log(response.data.hits[0].recipe.label);
-        console.log(response.data.hits[0].recipe.ingredientLines);
-        console.log(response.data.hits[0].recipe.totalTime);
-        console.log(response.data.hits[0].recipe.uri); //instructions
-        console.log(response.data.hits[0].recipe.image);
-        console.log(response.data.hits[0].recipe.healthLabels);
-        console.log(response.data.hits[0].recipe.dietLabels);
-        console.log(response.data.hits[0].recipe.calories);
-
-    });
-};
-
+<<<<<<< HEAD
 >>>>>>> aab71371e69b9e3bdbfdd9e2f1304abb3d2e52bd
+=======
+            // output = space + header + space + space
+            // space + "Name           :" + data.label +
+            //     space + "source         :" + data.uri +
+            //     space + "Ingredients    :" + data.ingredients;
+>>>>>>> ea0dfbc963d38f3f95a3f469826195a8e07205c6
 
          // <<<<<<< HEAD
             // console.log(output);	
@@ -158,8 +151,12 @@ const data = response.data.hits[0].recipe;
      });
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 displayRecipes();
 =======
+=======
+displayRecipes();
+>>>>>>> ea0dfbc963d38f3f95a3f469826195a8e07205c6
 
 // Landing page
 router.get("/", (req, res) => {
@@ -178,12 +175,15 @@ router.get("/", (req, res) => {
 // });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // // What to cook feature lets user click a random button to get a randomized recipe suggestion
 // router.get("/random", (req, res) => {
 //     res.render("random");
 // });
 =======
 
+=======
+>>>>>>> ea0dfbc963d38f3f95a3f469826195a8e07205c6
 // Displaying recipes by queries
 router.get("/search", (req, res) => {
     res.render("search");
