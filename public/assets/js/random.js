@@ -16,7 +16,7 @@ function randomRecipe (){
         .then((response) => {
 
         // Template of API response <wb>
-        console.log(response.hits);
+        // console.log(response.hits);
         // console.log(response.data.hits[0].recipe.label);
         // console.log(response.data.hits[0].recipe.ingredientLines);
         // console.log(response.data.hits[0].recipe.totalTime);
@@ -30,7 +30,7 @@ function randomRecipe (){
         const respHits = response.data.hits;
         const i = respHits[Math.floor(Math.random() * respHits.length)];
         
-        console.log(i.recipe.label);
+        // console.log(i.recipe.label);
 
         $(".label").html("label: " + i.recipe.label);
         $(".ingredient").html("Ingredients: " + i.recipe.ingredientLines);

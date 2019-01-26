@@ -41,7 +41,22 @@
                 <div id="user-recipe">
                     WELCOME TO HOMEPAGE
                     <p>Here are recipes submitted by your peers</p>
-                    <div id="disp-recipe"></div>                    
+                    <div id="disp-recipe">
+                        <ul>
+                            {{#each recipe}}
+                            {{this.label}}
+                            {{this.ing_1}}
+                            {{this.ing_2}}
+                            {{this.ing_3}}
+                            {{this.ing_4}}
+                            {{this.totalTime}}
+                            {{this.instructions_uri}}
+                            {{this.dietLabels}}
+                            {{this.allergies}}
+                            {{this.calories}}
+                            {{/each}}
+                        </ul>
+                    </div>                    
 
                 </div>
                 

@@ -123,19 +123,20 @@ router.get('/home', (req, res) => {
         let hbsObject = {
             recipe: data
         };
-        res.render("disp-recipe", hbsObject)
+        console.log(hbsObject)
+        res.render("home", {recipe : hbsObject})
     });
 });
 
+// Add Recipe Page
 router.post('/', (req, res) => {
-    recipe.create(['label', 'ingredientLines', 'totalTime', 'instructions_uri', 'image', 'dietLabels', 'allergies', 'calories'
+    recipe.create(['label', 'ing_1','ing_2','ing_3','ing_4', 'ing_5','ing_6','ing_7','ing_8', 'totalTime', 'instructions_uri', 'image', 'dietLabels', 'allergies', 'calories'
     ], [
-        req.body.label, req.body.ing1, req.body.totalTime, req.body.instruction, req.body.imageLink, req.body.dietLabels, req.body.allergies, req.body.calories
+        req.body.label, req.body.ing1, req.body.ing2, req.body.ing3, req.body.ing4, req.body.ing5, req.body.ing6, req.body.ing7, req.body.ing8, req.body.totalTime, req.body.instruction, req.body.imageLink, req.body.dietLabels, req.body.allergies, req.body.calories
     ],
     (data) => {
-        res.redirect('/');
+        res.redirect('/home');
     })
 });
-
 // Exporting router 
 module.exports = router;
