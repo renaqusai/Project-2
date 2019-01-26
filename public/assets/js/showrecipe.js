@@ -27,22 +27,30 @@ const showRecipes = () => {
             // label.append(response.hits[i].recipe.label);
             // $(".show").append(label);
 
-            
-            // var img = $("<img>");
-            // img.addClass("search-images");
-            // img.attr("width", "250")
-            // img.attr("src", response.hits[i].recipe.image)
-            // $(".show").append(img);
+           
 
             var label = $("<p>");
-            label.addClass("search-label");
+            label.addClass("search");
             label.append(response.hits[i].recipe.label);
             $(".show").append(label);
+ 
+            var img = $("<img>");
+            img.addClass("search");
+            img.attr("width", "250")
+            img.attr("src", response.hits[i].recipe.image)
+            $(".show").append(img);
+
+            var prepTime = $("<p>");
+            prepTime.addClass("search");
+            prepTime.append(response.hits[i].recipe.totalTime);
+            $(".show").html(prepTime);
 
             var ingr = $("<div>");
-            ingr.addClass("search-ingr");
+            ingr.addClass("search");
             ingr.append(response.hits[i].recipe.ingredientLines);
-            $(".show").append(ingr);
+            $(".show").append(`${ingr}<br/>`);
+
+            $(".show").append("<br/>");
 
 
             // var ingredients = response.hits[i].recipe.ingredientLines;
