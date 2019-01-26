@@ -23,16 +23,17 @@ body {
     font-size: 16px;
     line-height: 1.8;
     overflow-x: hidden;
-    background-color: #fff;
     font-family: 'Montserrat', sans-serif;
-    background-image: url("../img/background.jpg");
+    background-color: #fff;
+    background-image: url("../images/background.jpg");
     background-attachment: fixed;
     background-size: cover;
-}
+ }
 
 body,
 html {
     height: 100%;
+    width:100%;
 }
 
 .btn:focus,
@@ -126,6 +127,7 @@ textarea {
 
 /*====================
  Header
+
 ====================*/
 header {
     height: 63px;
@@ -139,12 +141,6 @@ header {
     width: 100%;
 }
 
-.header {
-    /* background-image: url("../img/background.jpg"); */
-    background-size: cover;
-    background-position: top;
-    background-repeat: no-repeat;
-}
 
 header .social-icons {
     float: right;
@@ -330,6 +326,24 @@ header .social-icons i:hover {
 }
 
 /*==================== 
+ button-after-login
+====================*/
+
+.button-box{
+    text-align: center;
+}
+
+.button-after-login{
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    background-color: transparent;
+    border-style: none;
+    cursor: grabbing;
+}
+
+
+/*==================== 
  Banner
 ====================*/
 .banner-home {
@@ -341,7 +355,7 @@ header .social-icons i:hover {
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
-
+    background-image: url(../images/banner.jpg);
 }
 
 .banner-home h1,
@@ -383,8 +397,9 @@ header .social-icons i:hover {
 }
 
 .banner-home i {
-    font-size: 22px;
+    font-size: 45px;
     margin-right: 15px;
+    color: white;
 }
 
 .banner-home .btn-success {
@@ -859,6 +874,51 @@ header .social-icons i:hover {
     Footer Section
 ====================*/
 
+
+.searchbar{
+    margin-bottom: auto;
+    margin-top: auto;
+    height: 60px;
+    background-color: #353b48;
+    border-radius: 30px;
+    padding: 10px;
+    }
+
+ 
+
+    .search_input{
+    color: white;
+    border: 0;
+    outline: 0;
+    background: none;
+    width: 0;
+    caret-color:transparent;
+    line-height: 40px;
+    transition: width 0.4s linear;
+    }
+
+    .searchbar:hover > .search_input{
+    padding: 0 10px;
+    width: 450px;
+    caret-color:red;
+    transition: width 0.4s linear;
+    }
+
+    .searchbar:hover > .search_icon{
+    color: #e74c3c;
+    }
+
+    .search_icon{
+    height: 40px;
+    width: 40px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color:white;
+    }
+
 .try{
     opacity: 1;
     float: left;
@@ -867,6 +927,16 @@ header .social-icons i:hover {
     border-style: none;
     color: white;
     cursor: grabbing;
+}
+
+.try-guest{
+    float: left;
+    width:50%;
+    background-color: transparent;
+    border-style: none;
+    color: white;
+    cursor: grabbing;
+
 }
 
 .fal {
@@ -976,12 +1046,19 @@ footer .copy-right p a {
     color: #52b304;
 }
 
+/*====================
+Login-Signup-Guest
+
+====================*/
+
 
 .login-button, .guest-button {
     float: left;
     text-align: center;
     width: 50%;
 }
+
+
 
 .sign-up,
 .guest {
@@ -1000,12 +1077,27 @@ footer .copy-right p a {
     height: 100%;
 }
 
-img{
+/*====================
+ Brand-title
+
+====================*/
+
+.image-front{
  margin-left:150px;
  margin-top: -200px;
 }
 
-.welcome {
+.image-side{
+    margin-left:-70px;
+    margin-top: -300px;
+   }
+
+.top-left-img{
+    margin-left:150px;
+    margin-top: -200px;
+   }
+
+/* .welcome {
     font-size: 60px bold;
     font-family: 'Bree Serif', serif !important;
     background: -webkit-linear-gradient(white, green);
@@ -1013,6 +1105,35 @@ img{
     -webkit-text-fill-color: transparent;
     font-weight: bolder;
     text-align: center !important;
+} */
+
+
+/*====================
+Heading every Page
+
+====================*/
+
+.heading{
+    width:100%;
+    text-align: center;
+    margin-bottom:50px;
+    font-family: 'Bree Serif', serif !important;
+
+}
+
+.heading-div-recipe{
+    margin-top:-175px !important;
+    text-align: center;
+}
+
+.heading-recipe{
+    font-size: 40px !important;
+
+}
+
+.heading-index-guest{
+    color: white !important;
+    font-weight: bolder !important;
 }
 
 /*==============================================
@@ -1839,7 +1960,7 @@ img{
     }
 
     .banner-home i {
-        font-size: 19px;
+        font-size: 45px;
         margin-right: 12px;
     }
 
@@ -1851,10 +1972,9 @@ img{
 
 @media(max-width:1024px) {
 
-    img{
-        margin-left: 100px;
-        margin-top: -150px;
-        width: 700px;
+    .image-side{
+        margin-left: -50px;
+        margin-top: -300px;
        }
 
     .sign-up,
@@ -1894,7 +2014,7 @@ img{
     }
 
     .banner-home i {
-        font-size: 19px;
+        font-size: 45px;
         margin-right: 12px;
     }
 
@@ -2275,13 +2395,18 @@ img{
 }
 
 @media (max-width: 768px) {
+
+    .searchbar:hover > .search_input{
+        padding: 0 10px;
+        width: 350px;
+        caret-color:red;
+        transition: width 0.4s linear;
+        }
     
-    img{
-        margin-left:25px;
-        margin-top: -100px;
-        width: 600px;
-       }
-    
+        .image-side{
+            margin-left: -50px;
+            margin-top:  -200px;
+           }
 
     .sign-up,
 .guest {
@@ -2695,11 +2820,27 @@ img{
 
 @media (max-width: 425px) {
 
-    img{
-        margin-left:0px;
-        margin-top: -50px;
-        width:400px;
-       }
+    .button-after-login{
+        width: 80px;
+        height: 70px;
+        text-align: center;
+        background-color: transparent;
+        border-style: none;
+        cursor: grabbing;
+    }
+
+    .searchbar:hover > .search_input{
+        padding: 0 10px;
+        width: 150px;
+        caret-color:red;
+        transition: width 0.4s linear;
+        }
+
+        .image-side{
+            margin-left:  -25px;
+            margin-top:  -200px;
+            width: 200px;
+           }
 
     
 
