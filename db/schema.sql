@@ -9,11 +9,9 @@ CREATE TABLE recipes (
     totalTime INT NOT NULL,
     instructions_uri VARCHAR(30) NOT NULL, 
     image VARCHAR(30) NOT NULL,
-    healthLabels VARCHAR(30) NOT NULL,
     dietLabels VARCHAR(30) NOT NULL,
+    allergies VARCHAR(30) NOT NULL,
     calories INT(30),
-    comments VARCHAR(150),
-    ratings INT,
     PRIMARY KEY (id)
 );
 
