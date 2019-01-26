@@ -6,9 +6,18 @@ router.get("/", (req, res) => {
     res.render("index");
 });
 
-// Home Page featuring recipes from users
-router.get("/home", (req, res) => {
-    res.render("home");
+
+// Display recipes from db to home
+var recipe = require("../models/recipemodel");
+router.get('/home', (req, res) => {
+    recipe.all((data) => {
+        let hbsObject = {
+            recipes: data
+        };
+        console.log('yay')
+        console.log(hbsObject)
+        res.render("home", hbsObject);
+    });
 });
 
 // What to cook feature lets user click a random button to get a randomized recipe suggestion

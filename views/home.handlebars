@@ -5,13 +5,29 @@
                 </div>
 
         <!-- container Start-->
+         <!-- container Start-->
         <div class="container">
             <!--Row Start-->
             <div>
                 <div id="user-recipe">
                     WELCOME TO HOMEPAGE
                     <p>Here are recipes submitted by your peers</p>
-                    <div id="disp-recipe"></div>                    
+                    <div id="disp-recipe">
+                        <ul>
+                            {{#each recipes}}
+                        <li>
+    
+                            {{this.label}}
+                            {{this.ing_1}}
+                            {{this.totalTime}}
+                            {{this.instructions_uri}}
+                            {{this.dietLabels}}
+                            {{this.allergies}}
+                            {{this.calories}}
+                            {{/each}}
+                            </li>
+                        </ul>
+                    </div>                    
 
                 </div>
                 
@@ -27,7 +43,7 @@
     <!-- Footer -->
     <footer class="footers">
       <a href="/random"><button class="try"><i class="fas fa-question-circle"></i></button></a>
-      <a href="/searchrecipe"><button class="try"><i class="fas fa-utensils"></i></button></a>
+      <a href="/showrecipe"><button class="try"><i class="fas fa-utensils"></i></button></a>
       <a href="/addrecipe"><button class="try"><i class="fas fa-pencil-alt"></i></button></a>
       <a href="/list"><button class="try"><i class="fas fa-list-ol"></i></button></a>
     </footer>

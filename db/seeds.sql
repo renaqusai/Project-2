@@ -1,2 +1,2 @@
 INSERT INTO recipes VALUES 
-    (1, "Salmon Ramen Burger", "Another Table", 45, "uri.com", "image.jpg", "Gluten Free", "High Protein", 500, "Comment is very good", 5);
+    (1, "Salmon Ramen Burger", "Another Table", 45, "uri.com", "image.jpg", "Gluten Free", "High Protein", 500);
