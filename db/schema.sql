@@ -1,5 +1,6 @@
-DROP DATABASE IF EXISTS recipe_db;
+CREATE DATABASE recipe_db;
 USE recipe_db;
+
 CREATE TABLE recipes (
     id INT AUTO_INCREMENT,
     label VARCHAR(30) NOT NULL,
@@ -12,8 +13,8 @@ CREATE TABLE recipes (
     ing_7 VARCHAR(200),
     ing_8 VARCHAR(200),
     totalTime INT NOT NULL,
-    instructions_uri VARCHAR(400) NOT NULL, 
-    image VARCHAR(30) NOT NULL,
+    instructions_uri VARCHAR(500) NOT NULL, 
+    image VARCHAR(500) NOT NULL,
     dietLabels VARCHAR(30) NOT NULL,
     allergies VARCHAR(30) NOT NULL,
     calories INT(30),

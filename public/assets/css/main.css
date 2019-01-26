@@ -125,36 +125,6 @@ textarea {
     font-family: 'Montserrat', sans-serif;
 }
 
-/*====================
- Header
-====================*/
-header {
-    height: 63px;
-    padding: 54px 0 0 0;
-    background: rgba(0, 0, 0, 0);
-    position: relative;
-    z-index: 100;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-}
-
-
-header .social-icons {
-    float: right;
-    padding: 12px 13px;
-    position: relative;
-}
-
-header .social-icons a {
-    margin-left: 25px;
-}
-
-header .social-icons i {
-    font-size: 18px;
-    color: white;
-}
 
 
 /*-------------------------------*/
@@ -423,14 +393,7 @@ header .social-icons i:hover {
     margin-left: 15px;
 }
 
-/*==================== 
- Testimonial Section
-====================*/
-.quote {
-    color: rgba(0, 0, 0, .1);
-    text-align: right;
-    margin-bottom: 30px;
-}
+
 
 /*-------------------------------*/
 /*    Carousel Fade Transition   */
@@ -569,77 +532,6 @@ header .social-icons i:hover {
     font-weight: 400;
 }
 
-/*==================== 
-    About Section
-====================*/
-.about {
-    width: 100%;
-    height: auto;
-    border-top: 1px solid #e5e5e5;
-    border-bottom: 1px solid #e5e5e5;
-}
-
-.about .img-thumbnail {
-    width: 100%;
-    height: 689px;
-    padding: 0;
-    object-fit: cover;
-    border: none;
-    border-radius: 0;
-}
-
-.about h2 {
-    padding-top: 76px;
-    padding-bottom: 10px;
-    font-size: 40px;
-    font-weight: 300;
-}
-
-.about span {
-    color: #49a003;
-}
-
-.about p {
-    font-size: 18px;
-    font-weight: 300;
-    padding-bottom: 20px;
-}
-
-.about ul>li {
-    display: block;
-    padding-bottom: 25px;
-}
-
-.about ul>li a {
-    font-size: 18px;
-    font-weight: 500;
-    color: #000;
-}
-
-.about ul>li .fa {
-    font-size: 18px;
-    margin-right: 10px;
-    color: #39b54a;
-}
-
-.about .btn-primary {
-    color: #d2d1d1;
-    margin: 15px 0;
-    font-size: 18px;
-    background-color: transparent;
-    border-color: transparent;
-}
-
-.about .btn-primary:not(:disabled):not(.disabled):active:focus {
-    box-shadow: none;
-}
-
-.about .btn-primary:not(:disabled):not(.disabled):active,
-.about .btn-primary:hover {
-    color: #49a003;
-    background-color: transparent;
-    border-color: #49a003;
-}
 
 /*==================== 
     Items Section
@@ -714,159 +606,6 @@ header .social-icons i:hover {
 
 .imageBox:hover .textBox {
     left: 0;
-}
-
-/*==================== 
-    Blog Section
-====================*/
-.blog {
-    width: 100%;
-    height: auto;
-    padding-top: 100px;
-    padding-bottom: 80px;
-    background-image: url("../images/banner.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    position: relative;
-}
-
-.blog .gradient {
-    background: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 100%);
-    background: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 100%);
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ccffffff', endColorstr='#ccffffff', GradientType=1);
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-}
-
-.blog .heading {
-    text-align: left;
-    position: relative;
-    padding-bottom: 70px;
-}
-
-.blog .heading h2 {
-    padding: 0;
-    font-size: 66px;
-    font-weight: 300;
-    line-height: 45px;
-    color: #fff;
-    letter-spacing: -5px;
-    font-family: 'Montserrat', sans-serif;
-    background-color: #000;
-    padding: 10px;
-    display: inline-block;
-}
-
-.blog .heading h3 {
-    padding: 0;
-    font-size: 34px;
-    font-weight: 300;
-    letter-spacing: 1px;
-    color: #fff;
-    font-family: 'Montserrat', sans-serif;
-    background-color: #000;
-    padding: 10px;
-    display: inline-block;
-}
-
-.blog .inner-content {
-    padding-right: 50px;
-}
-
-.blog h5 a {
-    color: #49a003;
-    font-size: 18px;
-    font-weight: 500;
-    padding-bottom: 5px;
-}
-
-.blog h6 {
-    color: #000;
-    font-size: 15px;
-    line-height: 23px;
-    font-weight: 400;
-    line-height: 22px;
-}
-
-.blog .img-thumbnail {
-    object-fit: cover;
-    padding: 0;
-    border: none;
-    border-radius: 0;
-}
-
-.Subscribe {
-    width: 100%;
-    height: auto;
-    color: #fff;
-    padding: 60px;
-    background: #49a003;
-}
-
-.Subscribe form {
-    float: right;
-}
-
-.Subscribe .heading h3 {
-    font-size: 50px;
-    font-weight: 300;
-    letter-spacing: -3px;
-    padding-bottom: 0px;
-}
-
-.Subscribe .heading h6 {
-    font-size: 25px;
-    font-weight: 300;
-    letter-spacing: 2px;
-}
-
-.Subscribe .Subscribe {
-    padding: 55px 0;
-}
-
-.Subscribe .form-control {
-    margin-bottom: 19px;
-    font-size: 14px;
-    border-radius: 0;
-    font-style: italic;
-    padding: 10px 10px;
-}
-
-.Subscribe .input-group {
-    padding: 7px 0;
-}
-
-.Subscribe .btn-info {
-    width: 210px;
-    height: 72px;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    color: #fff;
-    background: #000;
-    font-size: 22px;
-    border-radius: 0;
-    font-weight: 400;
-    border: 2px solid transparent;
-}
-
-.Subscribe .btn-info:hover {
-    color: #fff;
-    background-color: transparent;
-    border-color: rgba(255, 255, 255, 0.35);
-}
-
-.Subscribe input {
-    font-size: 12px;
-    width: 322px;
-    height: 72px;
-    padding: 0 18px;
-    border: none;
 }
 
 /*==================== 
@@ -948,15 +687,17 @@ header .social-icons i:hover {
 
     /* just for demo */
     width:100%;
-    background-color: white 0.1;
+    background-color: rgb(132, 202, 243) ;
     background-image: none;
     font-weight:bold;
-    font-size:24px;
+    font-size:14px;
     text-align:center;
+    vertical-align: middle;
     position:fixed;  
     left: 0;
     bottom: 0;
-
+    padding: 7px;
+   
 }
 
 
@@ -1047,6 +788,7 @@ footer .copy-right p a {
 
 /*====================
 Login-Signup-Guest
+
 ====================*/
 
 
@@ -1077,6 +819,7 @@ Login-Signup-Guest
 
 /*====================
  Brand-title
+
 ====================*/
 
 .image-front{
@@ -1094,19 +837,9 @@ Login-Signup-Guest
     margin-top: -200px;
    }
 
-/* .welcome {
-    font-size: 60px bold;
-    font-family: 'Bree Serif', serif !important;
-    background: -webkit-linear-gradient(white, green);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: bolder;
-    text-align: center !important;
-} */
-
-
 /*====================
 Heading every Page
+
 ====================*/
 
 .heading{
@@ -2389,7 +2122,7 @@ Heading every Page
         padding-bottom: 20px
     }
 }
-
+/* 
 @media (max-width: 768px) {
 
     .searchbar:hover > .search_input{
@@ -3305,30 +3038,5 @@ Heading every Page
         font-size: 12px;
     }
 
-    #blog-single .post strong {
-        font-size: 16px;
-    }
-
-    #blog-single .post strong span {
-        font-size: 12px;
-    }
-
-    #blog-single .post .col1 p {
-        letter-spacing: 0;
-        line-height: 20px;
-    }
-
-    #blog-single .post .col1 {
-        margin-bottom: 5px;
-        padding: 25px 20px;
-    }
-
-    #blog-single .post {
-        padding-bottom: 0;
-    }
-
-    .Subscribe .heading h3 {
-        font-size: 21px;
-        letter-spacing: 0;
-    }
-}
+  
+} */

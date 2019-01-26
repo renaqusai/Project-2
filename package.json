@@ -1,36 +1,16 @@
 {
-  "name": "recipekeeper",
+  "name": "012619",
   "version": "1.0.0",
-  "description": "This is Recipe Keeper App.  Functionality:",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/renaqusai/Project-2.git"
-  },
+  "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/renaqusai/Project-2/issues"
-  },
-  "homepage": "https://github.com/renaqusai/Project-2#readme",
   "dependencies": {
-    "axios": "^0.18.0",
-    "cookie-session": "^2.0.0-beta.3",
-    "dotenv": "^6.2.0",
-    "express": "^4.16.4",
-    "express-handlebars": "^3.0.0",
-    "ingredients-parser": "^1.4.0",
-    "jquery": "^3.3.1",
-    "mongoose": "^5.4.4",
-    "mysql": "^2.16.0",
-    "passport": "^0.4.0",
-    "passport-google-oauth20": "^1.0.0",
-    "require": "^2.4.20",
-    "requirejs": "^2.3.6"
+    "express": "^4.16.4"
   },
-  "keywords": []
+  "description": ""
 }
