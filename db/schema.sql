@@ -1,3 +1,4 @@
+DROP DATABASE IF EXISTS recipe_db;
 CREATE DATABASE recipe_db;
 USE recipe_db;
 
@@ -29,7 +30,6 @@ CREATE TABLE ingredient_lines (
     ing_8 VARCHAR(200) NOT NULL,
     PRIMARY KEY (recipe_id)
 );
-
 CREATE TABLE comments_ratings (
     recipe_id INT AUTO_INCREMENT,
     comments VARCHAR(300),

@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+<<<<<<< Updated upstream
 const axios = require('axios');
 
 
@@ -81,6 +82,8 @@ const data = response.data.hits[0].recipe;
      });
 };
 displayRecipes();
+=======
+>>>>>>> Stashed changes
 
 // Landing page
 router.get("/", (req, res) => {
@@ -97,19 +100,24 @@ router.get("/random", (req, res) => {
     res.render("random");
 });
 
+// Show recipes by pictures, page before recipe search
+router.get("/showrecipe", (req, res) => {
+    res.render("showrecipe");
+});
+
 // Displaying recipes by queries
 router.get("/search", (req, res) => {
-    res.render("search");
+    res.render("recipesearch");
 });
 
 // Page where user can write their recipe and submit an image
 router.get("/addrecipe", (req, res) => {
-    res.render("add_recipe");
+    res.render("addrecipe");
 });
 
 // Ingredients can be added to the list from recipes
 router.get("/shoppinglist", (req, res) => {
-    res.render("shopping_list");
+    res.render("list");
 });
 
 // Api submission from users
@@ -117,6 +125,7 @@ router.get("/recipes", (req, res) => {
     res.render("");
 });
 
+<<<<<<< Updated upstream
 // Display recipes from db to home
 // router.get('/home', (req, res) => {
 //     recipe.all((data) => {
@@ -127,5 +136,7 @@ router.get("/recipes", (req, res) => {
 //     });
 // });
 
+=======
+>>>>>>> Stashed changes
 // Exporting router 
 module.exports = router;
