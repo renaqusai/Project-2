@@ -18,7 +18,6 @@ const searchRecipes = () => {
         var resp_hits = response.hits;
         
         for (var i = 0; i < resp_hits.length; i++) {
-            // console.log(response.hits[i].recipe.label);
 
             var img = $("<img>");
             img.addClass("images");
