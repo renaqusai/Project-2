@@ -38,6 +38,7 @@ const showRecipes = () => {
             img.addClass("search");
             img.attr("width", "250")
             img.attr("src", response.hits[i].recipe.image)
+            
             $(".show").append(img);
 
             var prepTime = $("<p>");
@@ -48,9 +49,10 @@ const showRecipes = () => {
             var ingr = $("<div>");
             ingr.addClass("search");
             ingr.append(response.hits[i].recipe.ingredientLines);
+            $(".show").append(ingr);
             $(".show").append(`${ingr}<br/>`);
 
-            $(".show").append("<br/>");
+            // $(".show").append("<br/>");
 
 
             // var ingredients = response.hits[i].recipe.ingredientLines;
