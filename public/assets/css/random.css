@@ -1,0 +1,38 @@
+.random-title {
+    font-size: 40px !important;
+    color: white;
+    text-align: center;
+}
+
+.random-title-div{
+    width:100%;
+    margin-left:-150px;
+}
+
+.random-button-area {
+    text-align: center;
+    margin-left:-300px;
+    margin-top: 25px;
+
+} 
+
+.photo, .label, .ingredients, .instruction{
+width:33%;
+float:left;
+color: white;
+font-size: 20px;
+margin: auto;
+border-style: solid;
+
+}
+
+.image{
+    width: 250px;
+}
+
+.random-info-area{
+    width:100%;
+    margin:auto;
+    text-align: center;
+    margin-left: -200px;
+}

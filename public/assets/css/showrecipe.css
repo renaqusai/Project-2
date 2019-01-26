@@ -1,0 +1,14 @@
+.label{
+    width:100%;
+    height: 50px;
+}
+
+.containershow{
+    width: 450px;
+    margin:auto;
+}
+
+.search-bar-show, .side-logo-show{
+    float: left;
+    width:25%;
+}

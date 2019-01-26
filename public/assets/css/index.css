@@ -1,0 +1,23 @@
+.sign-up,
+.guest {
+    border-style: none;
+    color: white;
+    font-weight: bolder;
+    font-size: 20px;
+    background-color: transparent;
+    cursor: grabbing;
+}
+
+.button-area {
+    margin-top: -125px !important;
+    width: 90%;
+    display: flex;
+    margin: auto;
+    height: 100%;
+}
+
+.login-button, .guest-button {
+    float: left;
+    text-align: center;
+    width: 50%;
+}
