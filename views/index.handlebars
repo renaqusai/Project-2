@@ -1,19 +1,43 @@
 <section class="banner-home">
-
-    
+    <!-- Banner section Start-->
     <div class="container">
-        <div>
-            <div class="name">
-                <img class="jumbotron" src="/assets/images/recipe.png" alt="" height="auto" width="800">
+
+        <div class="side-logo">
+            <a href="/"><img src="/assets/images/recipe.png" alt="" height="auto" width="300"></a>
+        </div>
+
+        <div id="add-recipe">
+            
+            <p class='home-header'>Here are recipes submitted by your peers</p>
+
+            <div id="disp-recipe">
+                <ul>
+                    {{#each recipes}}
+                    <hr>
+                    <li>
+
+                        Recipe Name     : {{this.label}}<br/> 
+                        Ingredients     : {{this.ing_1}},
+                        {{this.ing_2}},
+                        {{this.ing_3}},
+                        {{this.ing_4}},
+                        {{this.ing_5}},
+                        {{this.ing_6}},
+                        {{this.ing_7}},
+                        {{this.ing_8}}<br/> 
+                        Image           : <img src="{{this.image}}" width='200px'></img><br/>
+                        Prep Time       : {{this.totalTime}} mins.<br/> 
+                        Instructions    : {{this.instructions_uri}}<br/> 
+                        Dietary Labels  : {{this.dietLabels}}<br/> 
+                        Allergies       : {{this.allergies}}<br/> 
+                        Calories        : {{this.calories}}<br/> 
+                    </li>
+                    {{/each}}
+                </ul>
             </div>
-            <div class="button-area">
-                <div class="login-button">
-                    <a href="/auth/google"><button class="sign-up">SIGN UP / LOG IN</button></a>
-                </div>
-                <div class="guest-button">
-                    <a href="/home"><button class="guest">CONTINUE AS GUEST</button></a>
-                </div>
-            </div>
+
         </div>
     </div>
+
+    <!-- container Ended-->
 </section>

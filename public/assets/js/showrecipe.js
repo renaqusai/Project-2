@@ -1,8 +1,9 @@
+
 const showRecipes = () => {
     const dataInput = document.getElementById('textInput').value;
-    console.log(dataInput)
+    // console.log(dataInput)
     const queryURL = "https://api.edamam.com/search?q=" + dataInput+ "&app_id=e3c21f1d&app_key=3e40f04f482e04daac9d6917ba78643f&from=0&to=10&calories=591-722";
-    console.log(queryURL)
+    // console.log(queryURL)
     $.ajax({
         url: queryURL,
         method: "GET"
@@ -15,16 +16,41 @@ const showRecipes = () => {
             // console.log(response.hits[i].recipe.label);
 
 
+            // var img = $("<img>");
+            // img.addClass("images");
+            // img.attr("width", "250")
+            // img.attr("src", response.hits[i].recipe.image)
+            // $(".show").append(img);
+
+            // var label = $("<p>");
+            // label.addClass("label");
+            // label.append(response.hits[i].recipe.label);
+            // $(".show").append(label);
+
+           
+
+            var label = $("<p>");
+            label.addClass("search");
+            label.append(response.hits[i].recipe.label);
+            $(".show").append(label);
+ 
             var img = $("<img>");
-            img.addClass("images");
+            img.addClass("search");
             img.attr("width", "250")
             img.attr("src", response.hits[i].recipe.image)
             $(".show").append(img);
 
-            var label = $("<p>");
-            label.addClass("label");
-            label.append(response.hits[i].recipe.label);
-            $(".show").append(label);
+            var prepTime = $("<p>");
+            prepTime.addClass("search");
+            prepTime.append(response.hits[i].recipe.totalTime);
+            $(".show").html(prepTime);
+
+            var ingr = $("<div>");
+            ingr.addClass("search");
+            ingr.append(response.hits[i].recipe.ingredientLines);
+            $(".show").append(`${ingr}<br/>`);
+
+            $(".show").append("<br/>");
 
 
             // var ingredients = response.hits[i].recipe.ingredientLines;

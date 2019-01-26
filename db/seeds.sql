@@ -1,2 +1,2 @@
 INSERT INTO recipes VALUES 
-    (1, "Salmon Ramen Burger", "Another Table", 45, "uri.com", "image.jpg", "Gluten Free", "High Protein", 500, "Comment is very good", 5);
+    (1, "Indoemie Goreng Special", "2 packs indomie goreng", '2 eggs', 'Bango sweet soy sauce', 'Sambal ABC', '2 oz green onions', '1 tbs Fried Shallots', '2 slice tomatoes', 'lettuce', 15, "Put indomie into hot boiling water, lay sauces on your plate. You know what to do;)", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ03B2nk_GdWafZnP_w5vSTQXeU28CSX7aSsYWRoujEefdSV5_X", "None", "None", 150);
