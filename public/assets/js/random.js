@@ -7,32 +7,30 @@ const APP_ID = process.env.APP_ID;
 const APP_KEY = process.env.APP_KEY;
 
 
-function randomRecipe (){
-    
+
+function randomRecipe() {
+
     const queryUrl = "https://api.edamam.com/search?q=&app_id="+APP_ID+"&app_key="+APP_KEY+"&from=0&to=3&calories=591-722";
 
     axios
         .get(queryUrl)
         .then((response) => {
 
-        // Template of API response <wb>
-        console.log(response.hits);
-        // console.log(response.data.hits[0].recipe.label);
-        // console.log(response.data.hits[0].recipe.ingredientLines);
-        // console.log(response.data.hits[0].recipe.totalTime);
-        // console.log(response.data.hits[0].recipe.uri);//instructions
-        // console.log(response.data.hits[0].recipe.image);
-        // console.log(response.data.hits[0].recipe.healthLabels);
-        // console.log(response.data.hits[0].recipe.dietLabels);
-        // console.log(response.data.hits[0].recipe.calories);
-        
-        // Randomize our search result and display one randomized recipe
-        const respHits = response.data.hits;
-        const i = respHits[Math.floor(Math.random() * respHits.length)];
-        
-        console.log(i.recipe.label);
+            // Template of API response <wb>
+            console.log(response.hits);
 
-        var img = $("<img>");
+            // Randomize our search result and display one randomized recipe
+            const respHits = response.data.hits;
+            const i = respHits[Math.floor(Math.random() * respHits.length)];
+
+            console.log(i.recipe.label);
+            console.log(i.recipe.ingredientLines);
+            console.log(i.recipe.image);
+            console.log(i.recipe.uri);
+
+
+
+            var img = $("<img>");
             img.addClass("image");
             img.attr("width", "100")
             img.attr("src", i.recipe.image)
@@ -51,9 +49,10 @@ function randomRecipe (){
 
             $(".instruction").html("Instructions: " + i.recipe.uri);
 
-    });
+
+        });
 };
 
 module.exports = {
-    randomRecipe,
+    randomRecipe
 };
