@@ -1,23 +1,24 @@
+var axios = require('axios');
+const ENV = require('dotenv');
+ENV.config();
+
+// Credentials <wb>
+const APP_ID = process.env.APP_ID;
+const APP_KEY = process.env.APP_KEY;
+
 const searchRecipes = () => {
-    const queryURL = "https://api.edamam.com/search?q=&app_id=e3c21f1d&app_key=3e40f04f482e04daac9d6917ba78643f&from=0&to=3&calories=591-722";
-    $.ajax({
+    const queryUrl = "https://api.edamam.com/search?q=&app_id="+APP_ID+"&app_key="+APP_KEY+"&from=0&to=3&calories=591-722";  
+      $.ajax({
         url: queryURL,
         method: "GET"
     }).then((response) => {
 
-        console.log(response.hits);
         var resp_hits = response.hits;
-        // console.log(response.data.hits[0].recipe.ingredientLines);
-        // console.log(response.data.hits[0].recipe.totalTime);
-        // console.log(response.data.hits[0].recipe.uri); //instructions
-        // console.log(response.data.hits[0].recipe.image);
-        // console.log(response.data.hits[0].recipe.healthLabels);
-        // console.log(response.data.hits[0].recipe.dietLabels);
-        // console.log(response.data.hits[0].recipe.calories);
-
+        
         for (var i = 0; i < resp_hits.length; i++) {
-            console.log(response.hits[i].recipe.label);
+            // console.log(response.hits[i].recipe.label);
 
+        
             var img = $("<img>");
             img.addClass("images");
             img.attr("width", "250")
@@ -38,12 +39,12 @@ const searchRecipes = () => {
                 li.append(ingredients[i]);
                 ul.append(li);
             }
-            $('#search').append(ul);
+            $('.recingredients').append(ul);
 
             var instruction = $("<p>");
             instruction.addClass("instruction");
             instruction.append(response.hits[i].recipe.uri);
-            $("#search").append(instruction);
+            $(".recinstruction").append(instruction);
 
         }
     });

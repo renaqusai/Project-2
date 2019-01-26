@@ -1,4 +1,4 @@
-const axios = require('axios');
+var axios = require('axios');
 const ENV = require('dotenv');
 ENV.config();
 
@@ -9,7 +9,7 @@ const APP_KEY = process.env.APP_KEY;
 
 function randomRecipe (){
     
-    const queryUrl = "https://api.edamam.com/search?q=&app_id=e3c21f1d&app_key=3e40f04f482e04daac9d6917ba78643f&from=0&to=3&calories=591-722";
+    const queryUrl = "https://api.edamam.com/search?q=&app_id="+APP_ID+"&app_key="+APP_KEY+"&from=0&to=3&calories=591-722";
 
     axios
         .get(queryUrl)
@@ -32,14 +32,24 @@ function randomRecipe (){
         
         console.log(i.recipe.label);
 
-        $(".label").html("label: " + i.recipe.label);
-        $(".ingredient").html("Ingredients: " + i.recipe.ingredientLines);
-        // $("").html("Total Time: " + i.recipe.totalTime);
-        $(".instruction").html("Instructions: " + i.recipe.uri);
-        $(".photo").html("Photo: " + i.recipe.image);
-        // $("").html("label: " + i.recipe.healthLabels);
-        // $("").html("label: " + i.recipe.dietLabels);
-        // $("").html("label: " + i.recipe.calories);
+        var img = $("<img>");
+            img.addClass("image");
+            img.attr("width", "100")
+            img.attr("src", i.recipe.image)
+            $(".photo").append(img);
+
+            $(".label").html(i.recipe.label);
+
+            var ingredients = i.recipe.ingredientLines;
+            var ul = $('<ul>');
+            for (var j = 0; j < ingredients.length; j++) {
+                var li = $('<li>');
+                li.append(ingredients[j]);
+                ul.append(li);
+            }
+            $('.ingredients').append(ul);
+
+            $(".instruction").html("Instructions: " + i.recipe.uri);
 
     });
 };
