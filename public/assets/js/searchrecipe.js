@@ -1,5 +1,15 @@
+var axios = require('axios');
+const ENV = require('dotenv');
+ENV.config();
+
+// Credentials <wb>
+const APP_ID = process.env.APP_ID;
+const APP_KEY = process.env.APP_KEY;
+
+
+
 const searchRecipes = () => {
-    const queryURL = "https://api.edamam.com/search?q=&app_id=e3c21f1d&app_key=3e40f04f482e04daac9d6917ba78643f&from=0&to=10&calories=591-722";
+    const queryUrl = "https://api.edamam.com/search?q=&app_id="+APP_ID+"&app_key="+APP_KEY+"&from=0&to=3&calories=591-722";
     $.ajax({
         url: queryURL,
         method: "GET"
