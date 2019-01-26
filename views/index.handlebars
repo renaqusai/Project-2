@@ -1,70 +1,43 @@
- <!-- Header section Start-->
-    <header class="top">
-        <div id="mySidenav" class="sidenav">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a class="active" href="index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="/recipes">Recipes from You</a>
-            <a href="">Github</a>
-            
-            
+<section class="banner-home">
+    <!-- Banner section Start-->
+    <div class="container">
+
+        <div class="side-logo">
+            <a href="/"><img src="/assets/images/recipe.png" alt="" height="auto" width="300"></a>
         </div>
 
-        <nav id="navbar">
-            <!-- container Start-->
-            <div class="container">
-                <!--Row Start-->
-                <div class="row">
-                    <div class="col-lg-4 col-xs-9">
-                        <!-- <a href="index.html"><img src="images/logo.png" alt="logo"></a> -->
-                    </div>
-                    <div class="col-lg-8 col-xs-3">
-                        <div class="social-icons square">
-                            <!-- Page Content -->
-                            <div id="page-content-wrapper">
-                                <span class="slide-menu" onclick="openNav()"><i class="fa fa-bars" aria-hidden="true"></i></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--Row Ended-->
-            </div>
-            <!-- container Ended-->
-        </nav>
-    </header>
-    <!-- Header section Ended-->
-    <section class="banner-home">
-        <!-- Banner section Start-->
+        <div id="add-recipe">
+            
+            <p class='home-header'>Here are recipes submitted by your peers</p>
 
-        <!-- container Start-->
-        <div class="container">
-            <!--Row Start-->
-            <div>
-                <div class="name">
-                        <img src="/assets/img/recipe.png" alt="" height="auto" width="800">
-                </div>
-                <div class = "button-area">
-                    <div class="login-button">
-                       <a href="/auth/google"><button class="sign-up">SIGN UP / LOG IN</button></a>
-                    </div>
-                    <div class="guest-button">
-                        <a href="/home"><button class="guest">CONTINUE AS GUEST</button></a>
-                    </div>
-                </div>
+            <div id="disp-recipe">
+                <ul>
+                    {{#each recipes}}
+                    <hr>
+                    <li>
+
+                        Recipe Name     : {{this.label}}<br/> 
+                        Ingredients     : {{this.ing_1}},
+                        {{this.ing_2}},
+                        {{this.ing_3}},
+                        {{this.ing_4}},
+                        {{this.ing_5}},
+                        {{this.ing_6}},
+                        {{this.ing_7}},
+                        {{this.ing_8}}<br/> 
+                        Image           : <img src="{{this.image}}" width='200px'></img><br/>
+                        Prep Time       : {{this.totalTime}} mins.<br/> 
+                        Instructions    : {{this.instructions_uri}}<br/> 
+                        Dietary Labels  : {{this.dietLabels}}<br/> 
+                        Allergies       : {{this.allergies}}<br/> 
+                        Calories        : {{this.calories}}<br/> 
+                    </li>
+                    {{/each}}
+                </ul>
             </div>
-            <!--Row Ended-->
+
         </div>
-        <!-- container Ended-->
-    </section>
-
     </div>
-    <!-- Footer Links -->
 
-    <!-- Footer -->
-    {{!-- <footer class="footers">
-      <a href="/random"><button class="try"><i class="fas fa-bookmark"></i></button></a>
-      <a href="/search"><button class="try"><i class="fas fa-utensils"></i></button></a>
-      <a href="/addrecipe"><button class="try"><i class="fas fa-pencil-alt"></i></button></a>
-      <a href="shoppinglist"><button class="try"><i class="fas fa-list-ol"></i></button></a>
-    </footer> --}}
-
+    <!-- container Ended-->
+</section>

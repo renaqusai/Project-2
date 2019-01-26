@@ -1,0 +1,83 @@
+.label{
+    width:100%;
+    height: 10px;
+}
+
+.containershow{
+    width: 450px;
+    margin:auto;
+}
+
+.search-bar-show, .side-logo-show{
+    float: left;
+    width:25%;
+}
+
+
+
+/* Homepage */
+#add-recipe {
+    background: #fff;
+    border: 10px gray;
+    border-radius: 8px;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    padding-bottom: 20px;
+    overflow: scroll;
+    height: 540px;
+    color: rgb(36, 33, 33);
+
+}
+
+#disp-recipe {
+    margin: 10px;
+};
+
+#subtext {   
+    padding: 20px;
+    margin: 20px;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+p.home-header {
+    font-size: 24px;
+    margin: 10px;
+    color:  rgb(132, 202, 243) ;
+}
+
+label {
+    font-family: 'Baloo Thambi', cursive;
+    margin-left: 10px;
+}
+
+.form-control {
+    margin: 10px;
+    width: 90%;
+    align-items: center;
+}
+
+.add-recipe {
+    font-family: 'Baloo Thambi', cursive;
+    background-color:  rgb(132, 202, 243) ;
+    margin-left: 20px;
+}
+
+/* Show Recipe */
+
+.input-area {
+    margin-top: 0;
+}
+
+/* Shopping list */
+
+#shopping-list {
+    font-family: 'Staatliches';
+    font-size: 48px;
+    text-align: center;
+    margin: 20px;
+    color:  rgb(132, 202, 243) ;
+    margin-top: 50px;
+
+}
+
