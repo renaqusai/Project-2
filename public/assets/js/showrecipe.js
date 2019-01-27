@@ -1,8 +1,7 @@
-
 const showRecipes = () => {
     const dataInput = document.getElementById('textInput').value;
     // console.log(dataInput)
-    const queryURL = "https://api.edamam.com/search?q=" + dataInput+ "&app_id=e3c21f1d&app_key=3e40f04f482e04daac9d6917ba78643f&from=0&to=10&calories=591-722";
+    const queryURL = "https://api.edamam.com/search?q=" + dataInput+ "&app_id=98e63b05&app_key=02d2ce3ca0d6177fdedc6360bb884ed3";
     // console.log(queryURL)
     $.ajax({
         url: queryURL,
@@ -38,6 +37,7 @@ const showRecipes = () => {
             img.addClass("search");
             img.attr("width", "250")
             img.attr("src", response.hits[i].recipe.image)
+            
             $(".show").append(img);
 
             var prepTime = $("<p>");
@@ -48,9 +48,10 @@ const showRecipes = () => {
             var ingr = $("<div>");
             ingr.addClass("search");
             ingr.append(response.hits[i].recipe.ingredientLines);
+            $(".show").append(ingr);
             $(".show").append(`${ingr}<br/>`);
 
-            $(".show").append("<br/>");
+            // $(".show").append("<br/>");
 
 
             // var ingredients = response.hits[i].recipe.ingredientLines;
